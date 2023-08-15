@@ -15,20 +15,15 @@ const students: Ref<Array<StudentItem>> = ref([])
 </script>
 
 <template>
-  <div class="student">
+  <div class="flex flex-col items-center text-right">
     <h1>This is a students page</h1>
     <!-- <Category></Category> -->
-    <div class="student">
+    <div class="flex flex-col items-center text-right">
       <Student v-for="student in students" :key="student.id" :student="student"></Student>
     </div>
   </div>
 </template>
 
 <style>
-.student {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-}
+
 </style>

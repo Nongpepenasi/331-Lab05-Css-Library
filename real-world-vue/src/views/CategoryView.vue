@@ -14,20 +14,15 @@ const events: Ref<Array<EventItem>> = ref([])
 </script>
 
 <template>
-  <div class="category">
+  <div class="flex flex-col items-center text-right">
     <h1>This is a categories page</h1>
     <!-- <Category></Category> -->
-    <div class="category">
+    <div class="flex flex-col items-center text-right">
       <Category v-for="event in events" :key="event.id" :event="event"></Category>
     </div>
   </div>
 </template>
 
 <style>
-.category {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: right;
-}
+
 </style>
