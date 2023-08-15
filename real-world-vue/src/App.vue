@@ -11,13 +11,13 @@ const { message } = storeToRefs(store)
 <template>
   <header class="max-h-screen leading-normal">
     <div id="flashMessage" v-if="message">
-      <h4>{{ message }}</h4>
+      <h4 class="text-lg">{{ message }}</h4>
     </div>
-    <nav>
-      <RouterLink :to="{name: 'event-list'}">Home</RouterLink>
-      <RouterLink :to="{name: 'about'}">About</RouterLink>
-      <RouterLink :to="{name: 'category'}">Category</RouterLink>
-      <RouterLink :to="{name: 'student'}">Student</RouterLink>
+    <nav class="p-8 ">
+      <RouterLink :to="{name: 'event-list'}" class="font-bold text-gray-700 hover:text-green-500">Home</RouterLink>
+      <RouterLink :to="{name: 'about'}" class="font-bold text-gray-700 hover:text-green-500">About</RouterLink>
+      <RouterLink :to="{name: 'category'}" class="font-bold text-gray-700 hover:text-green-500">Category</RouterLink>
+      <RouterLink :to="{name: 'student'}" class="font-bold text-gray-700 hover:text-green-500">Student</RouterLink>
       <!-- <RouterLink :></RouterLink> -->
     </nav>
 
@@ -32,28 +32,6 @@ const { message } = storeToRefs(store)
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-h4 {
-  font-size: 20px;
 }
 
 @keyframes yellowfade {
